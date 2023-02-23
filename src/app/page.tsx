@@ -31,7 +31,7 @@ export default function Home() {
                             <span className={"text-black font-bold"}>Victor Crest</span>
                             <span>26</span>
                         </h1>
-                        <h2 className={"text-sm"}>London</h2>
+                        <h2 className={"text-sm mt-px"}>London</h2>
                     </div>
 
                     <div className={"flex py-6 border-lightGrey border-t flex justify-evenly"}>
