@@ -1,91 +1,55 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+import Image from "next/image";
+import { Kumbh_Sans } from '@next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const kumbhSans = Kumbh_Sans({ subsets: ['latin'] })
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    return (
+        <main className={`${kumbhSans.className} px-6 flex flex-col h-screen justify-center items-center`}>
+            <Image className={"fixed top-[-168px] left-[-168px] opacity-25 lg:hidden"} src={"/images/bg-pattern-top.svg"}
+                   alt={"Victor's image"} width={622} height={622}/>
+            <Image className={"fixed bottom-[-168px] right-[-168px] opacity-25 lg:hidden"} src={"/images/bg-pattern-bottom.svg"} width={622} height={622}
+                   alt={"Victor's image"}/>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+            <Image className={"fixed top-[-478px] left-[-318px] opacity-25 max-lg:hidden"} src={"/images/bg-pattern-top.svg"}
+                   alt={"Victor's image"} width={978} height={978}/>
+            <Image className={"fixed bottom-[-478px] right-[-318px] opacity-25 max-lg:hidden"} src={"/images/bg-pattern-bottom.svg"} width={978} height={978}
+                   alt={"Victor's image"}/>
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            <div className={"rounded-2xl shadow-card w-full bg-white border-none max-w-[350px]"}>
+                <div className={"relative h-[140px] w-full"}>
+                    <Image className={"rounded-t-2xl"} src={"/images/bg-pattern-card.svg"} fill
+                           alt={"Background image"}/>
+                </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
+                <div className={"relative"}>
+                    <Image className={"rounded-full absolute top-[-48px] border-white border-[5px] mx-auto left-0 right-0"} src={"/images/image-victor.jpg"} width={96} height={96}
+                           alt={"Victor's image"}/>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+                    <div className={"text-grey text-lg pb-6 pt-[72px] flex flex-col items-center"}>
+                        <h1 className={"flex gap-2.5"}>
+                            <span className={"text-black font-bold"}>Victor Crest</span>
+                            <span>26</span>
+                        </h1>
+                        <h2 className={"text-sm"}>London</h2>
+                    </div>
+
+                    <div className={"flex py-6 border-lightGrey border-t flex justify-evenly"}>
+                        <div className={"text-center"}>
+                            <div className={"text-lg text-black font-bold"}>80K</div>
+                            <div className={"text-grey text-[10px] leading-[12px]"}>Followers</div>
+                        </div>
+                        <div className={"text-center"}>
+                            <div className={"text-lg text-black font-bold"}>803K</div>
+                            <div className={"text-grey text-[10px] leading-[12px]"}>Likes</div>
+                        </div>
+                        <div className={"text-center"}>
+                            <div className={"text-lg text-black font-bold"}>1.4K</div>
+                            <div className={"text-grey text-[10px] leading-[12px]"}>Photos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    )
 }
